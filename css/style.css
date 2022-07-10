@@ -6,9 +6,10 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 300px));
+    grid-template-columns: repeat(3, minmax(150px, 300px));
     grid-template-rows: repeat(3, minmax(100px, auto));
     grid-auto-rows: minmax(100px, auto);  /* последний нижний элемент */
+    gap: 10px;
 
 }
 
@@ -20,4 +21,23 @@
     font-size: 26px;
     border: 1px solid #000;
     border-radius: 4px;
+}
+
+#first {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#second {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#third {
+    grid-row-start: 1;
+    grid-row-end: 4;
+/*     grid-column-start: 1;
+    grid-column-end: 3; */
 }
